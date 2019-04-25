@@ -9,6 +9,7 @@ export default gql`
 	type Mutation {
 		createUser(input: UserInput): User
 		createMessage(message: String!, id:ID): Message
+		deleteMessage(id:ID):Message
 	}
 
 	type User {
