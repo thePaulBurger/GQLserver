@@ -8,7 +8,7 @@ export default gql`
 
 	type Mutation {
 		createUser(input: UserInput): User
-		createMessage(message: String!): Message
+		createMessage(message: String!, id:ID): Message
 	}
 
 	type User {
@@ -19,6 +19,11 @@ export default gql`
 
 	input UserInput {
 		name: String!
+	}
+
+	input MessageInput {
+		message: String!
+		id: ID
 	}
 
 	type Message {

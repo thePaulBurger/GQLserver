@@ -9,10 +9,10 @@ export default {
 	},
 
 	Mutation: {
-		createMessage: async (parent, { message }, {  models }) => {
+		createMessage: async (parent, { message, id  }, {  models }) => {
 			return await models.Message.create({
 				message,
-				userId: 1
+				userId: 2
 			});
 		},
 
